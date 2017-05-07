@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+  background: linear-gradient(#02035d, #e80f7a);
+  background-attachment: fixed;
+}
+
+* {
+  font-family: 'Joystix';
+  color: white;
+}
+
+
+@font-face {
+  font-family: 'Joystix';
+  font-style: normal;
+  font-weight: normal;
+  src:  url('/assets/fonts/JoystixMonospace.woff2') format('woff2'),
+  url('/assets/fonts/JoystixMonospace.woff') format('woff');
+}
+
+.card {
+  background: transparent;
+  border: 4px solid white;
+  cursor: pointer;
+  min-height: 50px;
+  min-width: 50px;
+}
+
+article {
+  height: 80vh;
+}
