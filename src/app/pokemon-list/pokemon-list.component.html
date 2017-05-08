@@ -1,0 +1,10 @@
+<div   fxLayout='row'
+       fxLayout.lt-md="column"
+       fxLayoutGap="2em"
+       fxLayoutWrap
+       class="pokemon-container">
+  <div class="text" *ngFor="let item of items | async">
+    {{item.name}}
+    <img [src]="item.img"/>
+  </div>
+</div>

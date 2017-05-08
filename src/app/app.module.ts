@@ -3,19 +3,27 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { FlexLayoutModule } from "@angular/flex-layout";
-
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
+import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PokemonListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AngularFireModule.initializeApp(environment.firebase, 'my-app-name'), // imports firebase/app needed for everything
+    AngularFireDatabaseModule, // imports firebase/database, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features
   ],
   providers: [],
   bootstrap: [AppComponent]
