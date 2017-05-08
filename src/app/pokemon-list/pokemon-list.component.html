@@ -3,7 +3,7 @@
        fxLayoutGap="2em"
        fxLayoutWrap
        class="pokemon-container">
-  <div class="text" *ngFor="let item of items | async">
+  <div fxFlex="20" class="text" *ngFor="let item of items | async">
     {{item.name}}
     <img [src]="item.img"/>
   </div>

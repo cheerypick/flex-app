@@ -42,12 +42,14 @@ article {
 .pokemon-container div {
   border: 4px solid white;
   padding: 5px;
+  margin-bottom: 2em;
+  margin-right: 2em;
+
 }
 
 
 .pokemon-container div:nth-child(4n+1) {
   background-color: #02035d;
-
 }
 
 
