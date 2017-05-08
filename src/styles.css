@@ -30,3 +30,29 @@ html {
 article {
   height: 80vh;
 }
+
+.container div {
+  min-height: 50px;
+  min-width: 50px;
+  background-color: #02035d;
+  border: 4px solid white;
+  padding: 5px;
+}
+
+
+
+.container div:first-child {
+  background-color: #e80f7a;
+}
+
+
+.container div:nth-of-type(2) {
+  background-color: #63e3ff;
+}
+
+
+.container div:last-child {
+  background-color: #e8c63e;
+}
+
+
