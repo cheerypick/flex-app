@@ -1,22 +1,31 @@
-<header>
-  <h1>Hello Angular Summit</h1>
-</header>
-<!--
-<article fxLayout='row'
-         fxLayout.lt-md="column"
-         fxLayoutGap="1em"
-  fxLayoutAlign="center">
-  <div class="card" fxFlex="20">  fxFlex="20"  </div>
-  <div class="card" fxFlex="40">  fxFlex="40"  </div>
-  <div class="card" fxFlex="20" fxHide.xs> fxFlex="20" </div>
-</article>
--->
+  <h1>Hello Angular Summit!</h1>
+
+<!--<flex-container></flex-container>-->
+<!--<pokemon-list></pokemon-list>-->
 
 
-<div class="container" fxLayout="row-reverse">
-  <div>One</div> <div>Two</div> <div>Three</div> <div>Four</div>
+
+<div class="main-container" fxLayout="column">
+  <header>
+    <h1>Hello Angular Summit!</h1>
+  </header>
+  <div fxLayout="row" fxLayout.xs="column" fxFlex="1 1 auto">
+
+    <nav fxFlex="1 6 20%" fxFlexOrder
+         fxFlexOrder.xs="2">nav</nav>
+
+    <article fxFlex="3 1 60%" fxFlexOrder
+             fxFlexOrder.xs="1">
+      article
+
+      <pokemon-list></pokemon-list>
+
+
+    </article>
+
+    <aside fxFlex="1 6 20%" fxFlexOrder
+           fxFlexOrder.xs="3">aside</aside>
+
+  </div>
+  <footer>footer</footer>
 </div>
-
-<pokemon-list></pokemon-list>
-
-<footer></footer>

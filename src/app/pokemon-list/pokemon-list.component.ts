@@ -12,7 +12,6 @@ import {MediaChange, ObservableMedia} from "@angular/flex-layout";
 export class PokemonListComponent implements OnInit, OnDestroy {
 
   watcher: Subscription;
-  activeMediaQuery = "";
   items: FirebaseListObservable<any[]>;
 
   constructor(db: AngularFireDatabase, media: ObservableMedia) {
@@ -20,12 +19,15 @@ export class PokemonListComponent implements OnInit, OnDestroy {
     console.log(this.items);
 
     this.watcher = media.subscribe((change: MediaChange) => {
-      this.activeMediaQuery = change ? `'${change.mqAlias}' = (${change.mediaQuery})` : "";
       console.log(change);
       if (change.mqAlias == 'xs') {
         console.log('mobile');
       }
     });
+
+    media.asObservable()
+      .filter((change: MediaChange) => change.mqAlias == 'xs')
+      .subscribe(() => console.log('mobile from observable'));
 
   }
 
